@@ -3,7 +3,7 @@ import { ethers } from "hardhat";
 const main = async () => {
 
     const Staking = await ethers.getContractFactory("Staking");
-    const staking = Staking.attach("0xAb4155dad989DFa948cC1ea25438e6b9e3C2A6E7");
+    const staking = Staking.attach("0xa9545fe38828A80Aaa889Bed8b89c0f0377bb56f");
 
   const stakeTxne = await staking.stake(1, { value: ethers.utils.parseEther("0.1")});
   const stakeTxnReciept = await stakeTxne.wait();
